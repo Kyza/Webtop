@@ -1,0 +1,20 @@
+{
+	"name": "Webtop",
+	"version": "0.0.1",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"start": "electron ."
+  },
+  "homepage": "https://github.com/KyzaGitHub/Webtop#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KyzaGitHub/Webtop.git"
+  },
+	"author": "Kyza",
+	"license": "MIT",
+	"dependencies": {
+		"electron": "^8.0.3",
+		"node-window-manager": "^2.0.1"
+	}
+}

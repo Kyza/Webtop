@@ -1,0 +1,72 @@
+{
+  "_args": [
+    [
+      "node-window-manager@2.0.1",
+      "C:\\Users\\Tyler\\Documents\\GitHub\\Webtop"
+    ]
+  ],
+  "_from": "node-window-manager@2.0.1",
+  "_id": "node-window-manager@2.0.1",
+  "_inBundle": false,
+  "_integrity": "sha512-vbLFpEQSUp2xjxZOfYoUnTLJdvFuOM9oy9dD22ut6EHUlU+d/wPK5beTP/n+7VZnBGLNIEijBKFzKKAWvq4RTw==",
+  "_location": "/node-window-manager",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "node-window-manager@2.0.1",
+    "name": "node-window-manager",
+    "escapedName": "node-window-manager",
+    "rawSpec": "2.0.1",
+    "saveSpec": null,
+    "fetchSpec": "2.0.1"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/node-window-manager/-/node-window-manager-2.0.1.tgz",
+  "_spec": "2.0.1",
+  "_where": "C:\\Users\\Tyler\\Documents\\GitHub\\Webtop",
+  "author": {
+    "name": "sentialx"
+  },
+  "bugs": {
+    "url": "https://github.com/sentialx/node-window-manager/issues"
+  },
+  "dependencies": {
+    "extract-file-icon": "^0.3.2",
+    "node-addon-api": "2.0.0",
+    "node-gyp": "6.0.1"
+  },
+  "description": "Manage windows in macOS, Windows and Linux",
+  "devDependencies": {
+    "@types/node": "12.12.17",
+    "tslint": "5.20.1",
+    "typescript": "3.7.3"
+  },
+  "homepage": "https://github.com/sentialx/node-window-manager#readme",
+  "keywords": [
+    "window-manager",
+    "native",
+    "macos",
+    "linux",
+    "windows"
+  ],
+  "license": "MIT",
+  "main": "dist/index.js",
+  "name": "node-window-manager",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sentialx/node-window-manager.git"
+  },
+  "scripts": {
+    "build": "tsc",
+    "install": "npm run rebuild",
+    "prepublishOnly": "npm run build && npm run rebuild",
+    "rebuild": "node-gyp rebuild",
+    "rebuild-dev": "npm run rebuild -- --debug",
+    "watch": "tsc --watch"
+  },
+  "types": "dist/index.d.ts",
+  "version": "2.0.1"
+}
