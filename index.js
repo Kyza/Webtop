@@ -31,10 +31,11 @@ const { app } = require("electron");
 
 function createDesktop() {
 	const process = require("child_process");
-	var ls = process.spawn(
+	var closeTaskbar = process.spawn(
 		path.join(__dirname, "native", "win10", "taskbar_close.cmd")
 	);
 	setTimeout(() => {
+		closeTaskbar.kill("SIGINT");
 		require(path.join(__dirname, "desktops", "AnimeJS"));
 	}, 3000);
 }
