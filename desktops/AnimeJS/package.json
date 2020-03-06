@@ -1,5 +1,5 @@
 {
-  "name": "Physics",
+  "name": "AnimeJS",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,8 +10,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "animejs": "^3.1.0",
-    "matter-js": "^0.14.2",
-    "pixi.js": "^4.8.9"
+    "animejs": "^3.1.0"
   }
 }

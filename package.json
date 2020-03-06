@@ -5,12 +5,12 @@
 	"main": "index.js",
 	"scripts": {
 		"start": "electron ."
-  },
-  "homepage": "https://github.com/KyzaGitHub/Webtop#readme",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/KyzaGitHub/Webtop.git"
-  },
+	},
+	"homepage": "https://github.com/KyzaGitHub/Webtop#readme",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/KyzaGitHub/Webtop.git"
+	},
 	"author": "Kyza",
 	"license": "MIT",
 	"dependencies": {
