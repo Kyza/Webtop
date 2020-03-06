@@ -70,3 +70,4 @@ Webtop only works on Windows 10 because there's no point to having this on Linux
  - Minimizing windows makes you lose them. This can be counteracted for now by restoring them.
  - Windows that get moved to the hidden icon tray on the default taskbar--such as Discord when you close it--makes you lose them.
  - The program closes after a while with the `ELIFECYCLE` for unknown reasons.
+   - Possibly due to a memory leak or other problem in the `node-window-manager` package. 
