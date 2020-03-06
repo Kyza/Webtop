@@ -3,7 +3,8 @@
 </h1>
 <p align="center">
  Easily build your own desktop using NodeJS and Electron.
- <img src="https://vote-for.kyza.net/Qh8U0w.gif" />
+ <hr>
+ <img src="images/TeQSwA.gif" />
 </p>
 <hr>
 
