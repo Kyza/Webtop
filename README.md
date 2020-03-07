@@ -69,5 +69,7 @@ Webtop only works on Windows 10 because there's no point to having this on Linux
  - If the first window that is opened using `node-window-manager` was maximized, it restores it down.
  - Minimizing windows makes you lose them. This can be counteracted for now by restoring them.
  - Windows that get moved to the hidden icon tray on the default taskbar--such as Discord when you close it--makes you lose them.
- - The program closes after a while with the `ELIFECYCLE` for unknown reasons.
-   - Possibly due to a memory leak or other problem in the `node-window-manager` package. 
+ - The program crashes because of a memory leak in Electron.
+   - This is due to [a regressed problem with Electron](https://github.com/electron/electron/issues/21555).
+   - The latest known version without a memory leak is Electron 4.2.12.
+   - Webtop will stay on the latest verion of Electron until a newer version has a fix because downgrading the Electron version will bring back even more significant problems with `desktopCapturer`.
