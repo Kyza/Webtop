@@ -31,8 +31,6 @@
 	var indexedItems = [];
 
 	module.exports.index = async () => {
-		console.time("Indexing");
-
 		async function* getFiles(dir) {
 			const dirents = await fsp.readdir(dir, { withFileTypes: true });
 			for (const dirent of dirents) {
@@ -110,11 +108,6 @@
 		for await (const item of getFiles(programFiles32Bit)) {
 			await indexItem(item);
 		}
-		console.timeEnd("Indexing");
-
-		// indexFiles(homedir);
-		// indexFiles(programFiles64Bit);
-		// indexFiles(programFiles32Bit);
 	};
 
 	module.exports.search = query => {
@@ -152,8 +145,6 @@
 				itemsFound.push(item);
 			}
 		}
-
-		console.log(indexedItems);
 
 		// Sort the items by the similarity.
 		// Highest to lowest.
