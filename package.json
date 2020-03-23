@@ -14,7 +14,8 @@
 	"author": "Kyza",
 	"license": "MIT",
 	"dependencies": {
-		"electron": "^8.0.3",
-		"node-window-manager": "^2.0.1"
+		"electron": "^7.0.0-beta.6",
+		"node-window-manager": "^2.0.1",
+		"string-similarity": "^4.0.1"
 	}
 }

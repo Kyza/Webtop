@@ -37,7 +37,7 @@ function createDesktop() {
 	setTimeout(() => {
 		closeTaskbar.kill("SIGINT");
 		require(path.join(__dirname, "desktops", "AnimeJS"));
-	}, 3000);
+	}, 5000);
 }
 
 // This method will be called when Electron has finished

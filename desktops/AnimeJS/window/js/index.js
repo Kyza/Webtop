@@ -2,13 +2,19 @@ const path = require("path");
 
 const anime = require("animejs");
 const WindowObserver = require("../../../core/window-observer");
+const fileIndexer = require("../../../core/file-indexer");
 const { desktopCapturer } = require("electron");
 const remote = require("electron").remote;
 const child_process = require("child_process");
 
+(async () => {
+	await fileIndexer.index();
+	console.log(fileIndexer.search("sharex"));
+})();
+
 var mouseX = 0;
 var mouseY = 0;
-document.body.onmousemove = (e) => {
+document.body.onmousemove = e => {
 	mouseX = e.screenX;
 	mouseY = e.screenY;
 };
@@ -37,7 +43,10 @@ WindowObserver.observe(async (allWindows, windowsAdded, windowsRemoved) => {
 		const floatingWindow = document.createElement("div");
 
 		const video = document.createElement("video");
-		floatingWindow.setAttribute("window-id", windowAdded.desktopCapturer.id);
+		floatingWindow.setAttribute(
+			"window-id",
+			windowAdded.desktopCapturer.id
+		);
 		floatingWindow.className = "window";
 
 		video.srcObject = await navigator.mediaDevices.getUserMedia({
@@ -54,7 +63,7 @@ WindowObserver.observe(async (allWindows, windowsAdded, windowsRemoved) => {
 			}
 		});
 
-		video.onloadedmetadata = (e) => {
+		video.onloadedmetadata = e => {
 			video.play();
 		};
 
@@ -82,7 +91,7 @@ WindowObserver.observe(async (allWindows, windowsAdded, windowsRemoved) => {
 
 		let moveInterval;
 
-		floatingWindow.onmouseenter = (e) => {
+		floatingWindow.onmouseenter = e => {
 			const calculatePosition = () => {
 				let position = mouseX - video.offsetWidth / 2;
 				if (
@@ -90,7 +99,8 @@ WindowObserver.observe(async (allWindows, windowsAdded, windowsRemoved) => {
 					document.getElementById("windows").offsetWidth - 50
 				)
 					position =
-						document.getElementById("windows").offsetWidth - video.offsetWidth;
+						document.getElementById("windows").offsetWidth -
+						video.offsetWidth;
 				if (position < 0) position = 0;
 				return position;
 			};
